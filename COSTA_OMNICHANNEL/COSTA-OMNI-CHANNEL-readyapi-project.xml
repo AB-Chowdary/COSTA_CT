@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d1a8acdf-0115-461c-8397-43556a5133ec" created="3.0.0" activeEnvironment="Default environment" name="COSTA_OMNI_CHANNEL" resourceRoot="" updated="3.0.0 2019-11-05T14:42:03Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="b922d737-6837-42a1-b367-731c9d124c0c" wadlVersion="http://wadl.dev.java.net/2009/02" name="OMNI_CHANNEL" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>https://localhost:2020</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Get" path="/promotions?${DataSource#input}" id="85539bd6-f756-46fa-bdbe-825963e33c5f">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Get-Promotions" id="02ef4d6c-3b90-452f-a586-cfc0ec1d41e5" method="GET">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>500 400 404 401</con:status>
+          <con:params/>
+          <con:element xmlns:c30="https://x-mobile-api.cloudhub.io/device/9c304f15-35b1-4481-93a3-c621a9da5ffb">c30:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>403</con:status>
+          <con:params/>
+          <con:element xmlns:prom="https://x-mobile-api-v1-dev.ir-e1.cloudhub.io/promotions">prom:Fault</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="GET" id="5bdf9351-6fbb-4c97-8d83-a4777d61b73a" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io</con:endpoint>
+          <con:request/>
+          <con:originalUri>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io/promotions</con:originalUri>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+          <con:parameterOrder/>
+        </con:request>
+      </con:method>
+    </con:resource>
+    <con:resource name="Put" path="/promotions/${DataSource#promotionId}" id="707c311e-5270-442f-bbf2-c14be6e4b301">
+      <con:settings/>
+      <con:parameters/>
+      <con:method name="Put_Promotions" id="7c424c1b-7e26-449f-a64a-76ea50f008bd" method="PUT">
+        <con:settings/>
+        <con:parameters/>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json; charset=UTF-8</con:mediaType>
+          <con:status>405 500 400 404 422</con:status>
+          <con:params/>
+          <con:element xmlns:prom="https://x-mobile-api-v1-dev.ir-e1.cloudhub.io/promotions">prom:Fault</con:element>
+        </con:representation>
+        <con:representation type="REQUEST">
+          <con:mediaType>application/json</con:mediaType>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json;charset=UTF-8</con:mediaType>
+          <con:status>201 200</con:status>
+          <con:params/>
+          <con:element xmlns:prom="https://x-mobile-api-v1-dev.ir-e1.cloudhub.io/promotions">prom:Response</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType xsi:nil="true"/>
+          <con:status>0</con:status>
+          <con:params/>
+          <con:element>data</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>403</con:status>
+          <con:params/>
+          <con:element xmlns:prom="https://x-mobile-api-v1-dev.ir-e1.cloudhub.io/promotions">prom:Fault</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="b3f95414-2d41-45c0-8b2e-fffa05f81f4e" mediaType="application/json" postQueryString="false">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io</con:endpoint>
+          <con:request/>
+          <con:credentials>
+            <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:parameters/>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="373a93db-971e-4e2b-b36d-73dbdbedc4a2" name="Get_Promotions">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="82b0d92d-f9e1-48af-b717-26d926e575e7" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="BMO" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="2a757732-73e8-490e-8125-7d024b1b7cbb">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Source</con:name>
+              <con:value>${projectDir}\Get_Promotions.xlsx</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="d2d58af7-5cda-418c-8f8f-67973e60660c">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${Properties#Source}</file>
+              <worksheet>BMO</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>TC_ID</con:property>
+          <con:property>input</con:property>
+          <con:property>Status_Code</con:property>
+          <con:property>Result</con:property>
+          <con:property>Request</con:property>
+          <con:property>Response</con:property>
+          <con:property>CorrelationID</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="TransactionID" id="9af81534-86a4-445b-880f-5cac90b1ce6e">
+        <con:settings/>
+        <con:config>
+          <script>//Generate random UUID	
+
+def verCode = UUID.randomUUID().toString() 
+return  verCode
+
+log.info verCode</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request" id="b50f0142-1f1a-43b7-ba33-8f693971bbd5">
+        <con:settings/>
+        <con:config service="OMNI_CHANNEL" resourcePath="/promotions?${DataSource#input}" methodName="Get-Promotions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request" id="15332951-ddd3-433e-9b1c-1d4de1ba59a3" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Bearer AQECAHiACBgFPsYPLHvnK54qxgBne25IYm1azaJ1e55xlak/LAAAAY8wggGLBgkqhkiG9w0BBwagggF8MIIBeAIBADCCAXEGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMLT3a6s1MGIX8AxTcAgEQgIIBQjajKD5XLWIVbUqG66i4s+k1/XIh+iIWGohAiz9Zt5a3AsPEfBKAn9AqRyKnL90N0SL/15/WqflTSEI2YV29aTHOaqINB4Fk5FiP9+zKFZOSZfxi0kZgixJn7mT55cZMWNVfDvWi+26CpGCkLzq1SN93/bfeVJtpCZK6aRmMd0B5pawWR4ut8dpYBV+Y0D2Xc5OrokpZGhPwcl/ZKYTqSLE1Tx2JVp3dPA/CWrvDrxpKao2Zue8GtnMhix0SuJnRpDQAU0kt6uaCOl0SBwuAHWtl2A9fmnR2w8MmN9ANRvsXdWA1jqJ2w1G9Lc3RFqpbortP3y8CSsPHmqwdxo2byqtngpxP+p4eqLw4ihsNYBjst5a1/a/a/uAII3VaJoaA4El/pezMj6jUq23ttKTi2zkQ9fq/I9z50UXCt/aAacW7XWo="/>
+  <con:entry key="X-COSTA-COUNTRY" value="GB"/>
+  <con:entry key="X-COSTA-CHANNEL" value="W"/>
+  <con:entry key="X-COSTA-TRANSACTION-ID" value="${TransactionID#result}"/>
+  <con:entry key="X-COSTA-EXT-CORRELATION-ID" value="234234234243"/>
+  <con:entry key="X-COSTA-ORGANISATION" value="COSTA"/>
+  <con:entry key="client_secret" value="123c9bBD60324e07943a756611cc5F6B"/>
+  <con:entry key="X-COSTA-LANG" value="en-gb"/>
+  <con:entry key="X-COSTA-ERROR-VERSION" value="v2"/>
+  <con:entry key="client_id" value="d4bc37e7aee248b486fc03da03fd6b0b"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+            </con:settings>
+            <con:endpoint>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://x-mobile-api.cloudhub.io/device/9c304f15-35b1-4481-93a3-c621a9da5ffb</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="responsevalidations" id="449db106-51c1-4158-904f-d39b5c88cc91">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.json.JsonSlurper
+
+//Fetch the raw headers from the response
+def httpValue = testRunner.testCase.testSteps['Request'].testRequest.response.getResponseHeaders()
+log.info httpValue
+def status = httpValue["#status#"].toString()
+log.info status
+
+//Get the status code value from the Input sheet
+def status_Code = context.expand( '${DataSource#Status_Code}' )
+
+log.info status_Code
+//Assert actual value to the expected value
+if (status.contains(status_Code))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="731b8d3e-9892-4e3b-bd33-5684617b76e8">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file/>
+              <outfile>${Properties#Source}</outfile>
+              <worksheet>BMO</worksheet>
+              <cell>D2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>Result</con:name>
+              <con:value>${responsevalidations#result}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Request</con:name>
+              <con:value>${Request#RawRequest}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Response</con:name>
+              <con:value>${Request#RawResponse}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>CorrelationID</con:name>
+              <con:value>${TransactionID#result}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="a0419415-a7ba-444f-80a8-141656ea0681">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>TransactionID</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a567ed7b-0222-47d5-95b6-89427e534f60</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>db01c64a-3f1b-454e-8edc-cb463c60de99</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b0d1ff29-5176-4ff1-a550-7d7b56aa7f5f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3feaaab9-4d3a-49a9-8a52-ebae47ed7b9b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2b3eb308-36a7-4558-b35e-83ad3376c8ea</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>941f6334-99b6-45bf-8c62-0753a6c1b261</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c55b0106-b6e8-44fa-bc38-82db5f4068ff</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="03b00b1b-4507-4770-9754-9ff19f9eee3b" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="HEADER" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="ea80616f-869c-4a89-a5df-1bc4741e955a">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Source</con:name>
+              <con:value>${projectDir}\Get_Promotions.xlsx</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="39ec1b3b-96cd-412e-9b01-5b9d14b47139">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${Properties#Source}</file>
+              <worksheet>Headers</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>TestCase ID</con:property>
+          <con:property>input</con:property>
+          <con:property>Authorization</con:property>
+          <con:property>X-COSTA-LANG</con:property>
+          <con:property>X-COSTA-COUNTRY</con:property>
+          <con:property>X-COSTA-CHANNEL</con:property>
+          <con:property>X-COSTA-ORGANISATION</con:property>
+          <con:property>client_id</con:property>
+          <con:property>client_secret</con:property>
+          <con:property>X-COSTA-EXT-CORRELATION-ID</con:property>
+          <con:property>Content-Type</con:property>
+          <con:property>Status_Code</con:property>
+          <con:property>Result</con:property>
+          <con:property>Request</con:property>
+          <con:property>Response</con:property>
+          <con:property>CorrelationID</con:property>
+          <con:property>ExceptionCode</con:property>
+          <con:property>Message</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="TransactionID" id="a724c594-2c2c-4f6a-80a6-6a471b945aaa">
+        <con:settings/>
+        <con:config>
+          <script>//Generate random UUID	
+
+def verCode = UUID.randomUUID().toString() 
+return  verCode
+
+log.info verCode</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request" id="7219c4f6-9e77-4bcc-8350-e601251efa86">
+        <con:settings/>
+        <con:config service="OMNI_CHANNEL" resourcePath="/promotions?${DataSource#input}" methodName="Get-Promotions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request" id="15332951-ddd3-433e-9b1c-1d4de1ba59a3" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="${DataSource#Authorization}"/>
+  <con:entry key="X-COSTA-COUNTRY" value="${DataSource#X-COSTA-COUNTRY}"/>
+  <con:entry key="X-COSTA-CHANNEL" value="${DataSource#X-COSTA-CHANNEL}"/>
+  <con:entry key="X-COSTA-TRANSACTION-ID" value="${TransactionID#result}"/>
+  <con:entry key="X-COSTA-EXT-CORRELATION-ID" value="234234234243"/>
+  <con:entry key="X-COSTA-ORGANISATION" value="${DataSource#X-COSTA-ORGANISATION}"/>
+  <con:entry key="client_secret" value="${DataSource#client_secret}"/>
+  <con:entry key="X-COSTA-LANG" value="${DataSource#X-COSTA-LANG}"/>
+  <con:entry key="X-COSTA-ERROR-VERSION" value="v2"/>
+  <con:entry key="client_id" value="${DataSource#client_id}"/>
+</xml-fragment>]]></con:setting>
+            </con:settings>
+            <con:endpoint>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://x-mobile-api.cloudhub.io/device/9c304f15-35b1-4481-93a3-c621a9da5ffb</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="responsevalidations" id="79ac345e-6a59-44eb-8d62-037e40e5a48f">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.json.JsonSlurper
+
+//Fetch the raw headers from the response
+def httpValue = testRunner.testCase.testSteps['Request'].testRequest.response.getResponseHeaders()
+log.info httpValue
+def status = httpValue["#status#"].toString()
+log.info status
+
+//Get the status code value from the Input sheet
+def status_Code = context.expand( '${DataSource#Status_Code}' )
+
+log.info status_Code
+//Assert actual value to the expected value
+if (status.contains(status_Code))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="ceb87eed-a1d6-4b7b-837e-503bd202b287">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file/>
+              <outfile>${Properties#Source}</outfile>
+              <worksheet>Headers</worksheet>
+              <cell>M2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>Result</con:name>
+              <con:value>${responsevalidations#result}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Request</con:name>
+              <con:value>${Request#RawRequest}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Response</con:name>
+              <con:value>${Request#RawResponse}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>CorrelationID</con:name>
+              <con:value>${TransactionID#result}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExceptionCode</con:name>
+              <con:value>${Request#Response#$['exception']['exceptionCode']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Message</con:name>
+              <con:value>${Request#Response#$['exception']['message']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>error</con:name>
+              <con:value>${Request#Response#$['error']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>description</con:name>
+              <con:value>${Request#Response#$['description']}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="9f4ff17c-f2a8-4c68-a474-a14ec1d5479e">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>TransactionID</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a567ed7b-0222-47d5-95b6-89427e534f60</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>db01c64a-3f1b-454e-8edc-cb463c60de99</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b0d1ff29-5176-4ff1-a550-7d7b56aa7f5f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3feaaab9-4d3a-49a9-8a52-ebae47ed7b9b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2b3eb308-36a7-4558-b35e-83ad3376c8ea</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>941f6334-99b6-45bf-8c62-0753a6c1b261</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c55b0106-b6e8-44fa-bc38-82db5f4068ff</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="15d07cad-5fa4-4055-a4bb-811c87208eb6" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="ID" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="53866ab1-346c-4fd9-a89f-2858e41e09fe">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Source</con:name>
+              <con:value>${projectDir}\Get_Promotions.xlsx</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="917378e6-3074-485d-9633-8fb9b96d0e53">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${Properties#Source}</file>
+              <worksheet>ID</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>TC_ID</con:property>
+          <con:property>input</con:property>
+          <con:property>Status_Code</con:property>
+          <con:property>Result</con:property>
+          <con:property>Request</con:property>
+          <con:property>Response</con:property>
+          <con:property>CorrelationID</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="TransactionID" id="82a0f039-e954-462f-8748-daf54f7d7369">
+        <con:settings/>
+        <con:config>
+          <script>//Generate random UUID	
+
+def verCode = UUID.randomUUID().toString() 
+return  verCode
+
+log.info verCode</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request" id="8dc643a3-ead0-49dc-be2f-9a632758060b">
+        <con:settings/>
+        <con:config service="OMNI_CHANNEL" resourcePath="/promotions?${DataSource#input}" methodName="Get-Promotions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request" id="15332951-ddd3-433e-9b1c-1d4de1ba59a3" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Bearer AQECAHiACBgFPsYPLHvnK54qxgBne25IYm1azaJ1e55xlak/LAAAAY8wggGLBgkqhkiG9w0BBwagggF8MIIBeAIBADCCAXEGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMLT3a6s1MGIX8AxTcAgEQgIIBQjajKD5XLWIVbUqG66i4s+k1/XIh+iIWGohAiz9Zt5a3AsPEfBKAn9AqRyKnL90N0SL/15/WqflTSEI2YV29aTHOaqINB4Fk5FiP9+zKFZOSZfxi0kZgixJn7mT55cZMWNVfDvWi+26CpGCkLzq1SN93/bfeVJtpCZK6aRmMd0B5pawWR4ut8dpYBV+Y0D2Xc5OrokpZGhPwcl/ZKYTqSLE1Tx2JVp3dPA/CWrvDrxpKao2Zue8GtnMhix0SuJnRpDQAU0kt6uaCOl0SBwuAHWtl2A9fmnR2w8MmN9ANRvsXdWA1jqJ2w1G9Lc3RFqpbortP3y8CSsPHmqwdxo2byqtngpxP+p4eqLw4ihsNYBjst5a1/a/a/uAII3VaJoaA4El/pezMj6jUq23ttKTi2zkQ9fq/I9z50UXCt/aAacW7XWo="/>
+  <con:entry key="X-COSTA-COUNTRY" value="GB"/>
+  <con:entry key="X-COSTA-CHANNEL" value="W"/>
+  <con:entry key="X-COSTA-TRANSACTION-ID" value="${TransactionID#result}"/>
+  <con:entry key="X-COSTA-EXT-CORRELATION-ID" value="234234234243"/>
+  <con:entry key="X-COSTA-ORGANISATION" value="COSTA"/>
+  <con:entry key="client_secret" value="123c9bBD60324e07943a756611cc5F6B"/>
+  <con:entry key="X-COSTA-LANG" value="en-gb"/>
+  <con:entry key="X-COSTA-ERROR-VERSION" value="v2"/>
+  <con:entry key="client_id" value="d4bc37e7aee248b486fc03da03fd6b0b"/>
+  <con:entry key="Content-Type" value="application/json"/>
+</xml-fragment>]]></con:setting>
+            </con:settings>
+            <con:endpoint>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://x-mobile-api.cloudhub.io/device/9c304f15-35b1-4481-93a3-c621a9da5ffb</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+            <con:parameterOrder/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="responsevalidations" id="66bb1e88-472e-4c53-bd59-2d4d42d05486">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.json.JsonSlurper
+
+//Fetch the raw headers from the response
+def httpValue = testRunner.testCase.testSteps['Request'].testRequest.response.getResponseHeaders()
+log.info httpValue
+def status = httpValue["#status#"].toString()
+log.info status
+
+//Get the status code value from the Input sheet
+def status_Code = context.expand( '${DataSource#Status_Code}' )
+
+log.info status_Code
+//Assert actual value to the expected value
+if (status.contains(status_Code))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="1cb603cd-a339-49a5-a797-a5d6ac16136c">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file/>
+              <outfile>${Properties#Source}</outfile>
+              <worksheet>ID</worksheet>
+              <cell>D2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>Result</con:name>
+              <con:value>${responsevalidations#result}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Request</con:name>
+              <con:value>${Request#RawRequest}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Response</con:name>
+              <con:value>${Request#RawResponse}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>CorrelationID</con:name>
+              <con:value>${TransactionID#result}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="b8014626-d5a7-4a20-9bff-223e80816bab">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>TransactionID</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a567ed7b-0222-47d5-95b6-89427e534f60</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>db01c64a-3f1b-454e-8edc-cb463c60de99</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b0d1ff29-5176-4ff1-a550-7d7b56aa7f5f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3feaaab9-4d3a-49a9-8a52-ebae47ed7b9b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2b3eb308-36a7-4558-b35e-83ad3376c8ea</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>941f6334-99b6-45bf-8c62-0753a6c1b261</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c55b0106-b6e8-44fa-bc38-82db5f4068ff</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="d307cc39-674d-4898-8240-140ec416dbd6" name="PUT_Promotions">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="1d4943a0-5dcd-4485-a81f-0e00f4381f5a" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="BMO" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="b76a5388-4e92-42e6-8f1a-4eaefc73c85f">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Source</con:name>
+              <con:value>${projectDir}\Put_Promotions.xlsx</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="07536542-f84c-4b69-ae5b-6c204beb039d">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${Properties#Source}</file>
+              <worksheet>BMO</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>TC_ID</con:property>
+          <con:property>promotionId</con:property>
+          <con:property>Status_Code</con:property>
+          <con:property>Result</con:property>
+          <con:property>Request</con:property>
+          <con:property>Response</con:property>
+          <con:property>CorrelationID</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="TransactionID" id="6ae1d85b-ae5b-4e68-835b-6ed4b63bace4">
+        <con:settings/>
+        <con:config>
+          <script>//Generate random UUID	
+
+def verCode = UUID.randomUUID().toString() 
+return  verCode
+
+log.info verCode</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request" id="0d2fa36c-52b5-4435-8545-bc7fb5fa09dd">
+        <con:settings/>
+        <con:config service="OMNI_CHANNEL" resourcePath="/promotions/${DataSource#promotionId}" methodName="Put_Promotions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request" id="b3f95414-2d41-45c0-8b2e-fffa05f81f4e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Bearer AQECAHiACBgFPsYPLHvnK54qxgBne25IYm1azaJ1e55xlak/LAAAAY8wggGLBgkqhkiG9w0BBwagggF8MIIBeAIBADCCAXEGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMLT3a6s1MGIX8AxTcAgEQgIIBQjajKD5XLWIVbUqG66i4s+k1/XIh+iIWGohAiz9Zt5a3AsPEfBKAn9AqRyKnL90N0SL/15/WqflTSEI2YV29aTHOaqINB4Fk5FiP9+zKFZOSZfxi0kZgixJn7mT55cZMWNVfDvWi+26CpGCkLzq1SN93/bfeVJtpCZK6aRmMd0B5pawWR4ut8dpYBV+Y0D2Xc5OrokpZGhPwcl/ZKYTqSLE1Tx2JVp3dPA/CWrvDrxpKao2Zue8GtnMhix0SuJnRpDQAU0kt6uaCOl0SBwuAHWtl2A9fmnR2w8MmN9ANRvsXdWA1jqJ2w1G9Lc3RFqpbortP3y8CSsPHmqwdxo2byqtngpxP+p4eqLw4ihsNYBjst5a1/a/a/uAII3VaJoaA4El/pezMj6jUq23ttKTi2zkQ9fq/I9z50UXCt/aAacW7XWo="/>
+  <con:entry key="X-COSTA-COUNTRY" value="GB"/>
+  <con:entry key="X-COSTA-CHANNEL" value="W"/>
+  <con:entry key="X-COSTA-TRANSACTION-ID" value="${TransactionID#result}"/>
+  <con:entry key="ActivationSource" value="home"/>
+  <con:entry key="X-COSTA-EXT-CORRELATION-ID" value="234234234243"/>
+  <con:entry key="X-COSTA-ORGANISATION" value="COSTA"/>
+  <con:entry key="client_secret" value="123c9bBD60324e07943a756611cc5F6B"/>
+  <con:entry key="X-COSTA-LANG" value="en-gb"/>
+  <con:entry key="X-COSTA-ERROR-VERSION" value="v2"/>
+  <con:entry key="client_id" value="d4bc37e7aee248b486fc03da03fd6b0b"/>
+</xml-fragment>]]></con:setting>
+            </con:settings>
+            <con:endpoint>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io/promotions</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="responsevalidations" id="57b8ba54-276a-4c6c-aa67-c8f4e7c8b74a">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.json.JsonSlurper
+
+//Fetch the raw headers from the response
+def httpValue = testRunner.testCase.testSteps['Request'].testRequest.response.getResponseHeaders()
+log.info httpValue
+def status = httpValue["#status#"].toString()
+log.info status
+
+//Get the status code value from the Input sheet
+def status_Code = context.expand( '${DataSource#Status_Code}' )
+
+log.info status_Code
+//Assert actual value to the expected value
+if (status.contains(status_Code))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="b73258ec-a050-4c27-867a-25ac3e598cd0">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file/>
+              <outfile>${Properties#Source}</outfile>
+              <worksheet>BMO</worksheet>
+              <cell>D2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>Result</con:name>
+              <con:value>${responsevalidations#result}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Request</con:name>
+              <con:value>${Request#RawRequest}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Response</con:name>
+              <con:value>${Request#RawResponse}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>CorrelationID</con:name>
+              <con:value>${TransactionID#result}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="df1c45aa-2e67-405f-8e04-5e001560d734">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>TransactionID</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a567ed7b-0222-47d5-95b6-89427e534f60</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>db01c64a-3f1b-454e-8edc-cb463c60de99</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b0d1ff29-5176-4ff1-a550-7d7b56aa7f5f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3feaaab9-4d3a-49a9-8a52-ebae47ed7b9b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2b3eb308-36a7-4558-b35e-83ad3376c8ea</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>941f6334-99b6-45bf-8c62-0753a6c1b261</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c55b0106-b6e8-44fa-bc38-82db5f4068ff</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>0d2fa36c-52b5-4435-8545-bc7fb5fa09dd</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="c8a479d2-8eb5-4b83-858c-daa793281144" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="ID" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="269624dc-164f-4da1-b138-71c5a58e4e50">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Source</con:name>
+              <con:value>${projectDir}\Put_Promotions.xlsx</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="aaeeb5da-e5e6-4707-8e19-1a0501e34c41">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${Properties#Source}</file>
+              <worksheet>ID</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>TC_ID</con:property>
+          <con:property>promotionId</con:property>
+          <con:property>Status_Code</con:property>
+          <con:property>Result</con:property>
+          <con:property>Request</con:property>
+          <con:property>Response</con:property>
+          <con:property>CorrelationID</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="TransactionID" id="a789e180-d12e-48cd-af4c-d5144ad19ae8">
+        <con:settings/>
+        <con:config>
+          <script>//Generate random UUID	
+
+def verCode = UUID.randomUUID().toString() 
+return  verCode
+
+log.info verCode</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request" id="1d89083f-182e-41a6-b4a2-b9e0d65aca5a">
+        <con:settings/>
+        <con:config service="OMNI_CHANNEL" resourcePath="/promotions/${DataSource#promotionId}" methodName="Put_Promotions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request" id="b3f95414-2d41-45c0-8b2e-fffa05f81f4e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="Bearer AQECAHiACBgFPsYPLHvnK54qxgBne25IYm1azaJ1e55xlak/LAAAAY8wggGLBgkqhkiG9w0BBwagggF8MIIBeAIBADCCAXEGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMLT3a6s1MGIX8AxTcAgEQgIIBQjajKD5XLWIVbUqG66i4s+k1/XIh+iIWGohAiz9Zt5a3AsPEfBKAn9AqRyKnL90N0SL/15/WqflTSEI2YV29aTHOaqINB4Fk5FiP9+zKFZOSZfxi0kZgixJn7mT55cZMWNVfDvWi+26CpGCkLzq1SN93/bfeVJtpCZK6aRmMd0B5pawWR4ut8dpYBV+Y0D2Xc5OrokpZGhPwcl/ZKYTqSLE1Tx2JVp3dPA/CWrvDrxpKao2Zue8GtnMhix0SuJnRpDQAU0kt6uaCOl0SBwuAHWtl2A9fmnR2w8MmN9ANRvsXdWA1jqJ2w1G9Lc3RFqpbortP3y8CSsPHmqwdxo2byqtngpxP+p4eqLw4ihsNYBjst5a1/a/a/uAII3VaJoaA4El/pezMj6jUq23ttKTi2zkQ9fq/I9z50UXCt/aAacW7XWo="/>
+  <con:entry key="X-COSTA-COUNTRY" value="GB"/>
+  <con:entry key="X-COSTA-CHANNEL" value="W"/>
+  <con:entry key="X-COSTA-TRANSACTION-ID" value="${TransactionID#result}"/>
+  <con:entry key="ActivationSource" value="home"/>
+  <con:entry key="X-COSTA-EXT-CORRELATION-ID" value="234234234243"/>
+  <con:entry key="X-COSTA-ORGANISATION" value="COSTA"/>
+  <con:entry key="client_secret" value="123c9bBD60324e07943a756611cc5F6B"/>
+  <con:entry key="X-COSTA-LANG" value="en-gb"/>
+  <con:entry key="X-COSTA-ERROR-VERSION" value="v2"/>
+  <con:entry key="client_id" value="d4bc37e7aee248b486fc03da03fd6b0b"/>
+</xml-fragment>]]></con:setting>
+            </con:settings>
+            <con:endpoint>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io/promotions</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="responsevalidations" id="d235bc33-a3a9-4261-939b-47f62af73777">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.json.JsonSlurper
+
+//Fetch the raw headers from the response
+def httpValue = testRunner.testCase.testSteps['Request'].testRequest.response.getResponseHeaders()
+log.info httpValue
+def status = httpValue["#status#"].toString()
+log.info status
+
+//Get the status code value from the Input sheet
+def status_Code = context.expand( '${DataSource#Status_Code}' )
+
+log.info status_Code
+//Assert actual value to the expected value
+if (status.contains(status_Code))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="f1a06a73-9d53-4779-a9db-dde6ceb06da4">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file/>
+              <outfile>${Properties#Source}</outfile>
+              <worksheet>ID</worksheet>
+              <cell>D2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>Result</con:name>
+              <con:value>${responsevalidations#result}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Request</con:name>
+              <con:value>${Request#RawRequest}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Response</con:name>
+              <con:value>${Request#RawResponse}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>CorrelationID</con:name>
+              <con:value>${TransactionID#result}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="6a8532b2-4528-4daf-bb4d-4a7aff7d338b">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>TransactionID</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a567ed7b-0222-47d5-95b6-89427e534f60</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>db01c64a-3f1b-454e-8edc-cb463c60de99</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b0d1ff29-5176-4ff1-a550-7d7b56aa7f5f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3feaaab9-4d3a-49a9-8a52-ebae47ed7b9b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2b3eb308-36a7-4558-b35e-83ad3376c8ea</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>941f6334-99b6-45bf-8c62-0753a6c1b261</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c55b0106-b6e8-44fa-bc38-82db5f4068ff</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>0d2fa36c-52b5-4435-8545-bc7fb5fa09dd</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:testCase id="04a667e9-a7b5-438a-9603-f16f998ba123" discardOkResults="false" failOnError="false" failTestCaseOnErrors="false" keepSession="false" name="Header" searchProperties="true" timeout="0" maxResults="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="properties" name="Properties" id="24b95c11-ba9b-4bc3-ba7c-b172ddd3631b">
+        <con:settings/>
+        <con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:properties>
+            <con:property>
+              <con:name>Source</con:name>
+              <con:value>${projectDir}\Put_Promotions.xlsx</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasource" name="DataSource" id="0f85aa37-9930-4e08-87b6-bee73a8d93dc">
+        <con:settings/>
+        <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSource type="Excel">
+            <con:configuration>
+              <file>${Properties#Source}</file>
+              <worksheet>Headers</worksheet>
+              <cell>A2</cell>
+              <ignoreEmpty>true</ignoreEmpty>
+              <evaluateFormulas>false</evaluateFormulas>
+            </con:configuration>
+          </con:dataSource>
+          <con:shared>true</con:shared>
+          <con:restartShared>true</con:restartShared>
+          <con:property>TestCase ID</con:property>
+          <con:property>promotionId</con:property>
+          <con:property>Authorization</con:property>
+          <con:property>X-COSTA-LANG</con:property>
+          <con:property>X-COSTA-COUNTRY</con:property>
+          <con:property>X-COSTA-CHANNEL</con:property>
+          <con:property>X-COSTA-ORGANISATION</con:property>
+          <con:property>client_id</con:property>
+          <con:property>client_secret</con:property>
+          <con:property>X-COSTA-EXT-CORRELATION-ID</con:property>
+          <con:property>Content-Type</con:property>
+          <con:property>ActivationSource</con:property>
+          <con:property>Status_Code</con:property>
+          <con:property>Result</con:property>
+          <con:property>Request</con:property>
+          <con:property>Response</con:property>
+          <con:property>CorrelationID</con:property>
+          <con:property>ExceptionCode</con:property>
+          <con:property>Message</con:property>
+          <con:property>error</con:property>
+          <con:property>description</con:property>
+          <con:restartOnRun>true</con:restartOnRun>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="TransactionID" id="ceae44a6-7553-47dc-be78-a3633e6a91ce">
+        <con:settings/>
+        <con:config>
+          <script>//Generate random UUID	
+
+def verCode = UUID.randomUUID().toString() 
+return  verCode
+
+log.info verCode</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="restrequest" name="Request" id="c2289cb6-f718-4970-b7fe-4fb4e5fd0265">
+        <con:settings/>
+        <con:config service="OMNI_CHANNEL" resourcePath="/promotions/${DataSource#promotionId}" methodName="Put_Promotions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request" id="b3f95414-2d41-45c0-8b2e-fffa05f81f4e" mediaType="application/json" postQueryString="false">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Authorization" value="${DataSource#Authorization}"/>
+  <con:entry key="X-COSTA-COUNTRY" value="${DataSource#X-COSTA-COUNTRY}"/>
+  <con:entry key="X-COSTA-CHANNEL" value="${DataSource#X-COSTA-CHANNEL}"/>
+  <con:entry key="X-COSTA-TRANSACTION-ID" value="${TransactionID#result}"/>
+  <con:entry key="ActivationSource" value="${DataSource#ActivationSource}"/>
+  <con:entry key="X-COSTA-EXT-CORRELATION-ID" value="234234234243"/>
+  <con:entry key="X-COSTA-ORGANISATION" value="${DataSource#X-COSTA-ORGANISATION}"/>
+  <con:entry key="client_secret" value="${DataSource#client_secret}"/>
+  <con:entry key="X-COSTA-LANG" value="${DataSource#X-COSTA-LANG}"/>
+  <con:entry key="X-COSTA-ERROR-VERSION" value="v2"/>
+  <con:entry key="client_id" value="${DataSource#client_id}"/>
+</xml-fragment>]]></con:setting>
+            </con:settings>
+            <con:endpoint>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io</con:endpoint>
+            <con:request/>
+            <con:originalUri>https://x-mobile-api-v1-dev.ir-e1.cloudhub.io/promotions</con:originalUri>
+            <con:credentials>
+              <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+              <con:authType>No Authorization</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:parameters/>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="groovy" name="responsevalidations" id="728eeef0-802c-413f-bc11-8844a537050f">
+        <con:settings/>
+        <con:config>
+          <script>import groovy.json.JsonSlurper
+
+//Fetch the raw headers from the response
+def httpValue = testRunner.testCase.testSteps['Request'].testRequest.response.getResponseHeaders()
+log.info httpValue
+def status = httpValue["#status#"].toString()
+log.info status
+
+//Get the status code value from the Input sheet
+def status_Code = context.expand( '${DataSource#Status_Code}' )
+
+log.info status_Code
+//Assert actual value to the expected value
+if (status.contains(status_Code))
+{
+return "PASS"
+}
+else
+{
+return "FAIL"
+}</script>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasink" name="DataSink" id="dfa66d74-63d5-45b5-a9dc-c11c55f73a0e">
+        <con:settings/>
+        <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:dataSink type="Excel">
+            <con:configuration>
+              <file/>
+              <outfile>${Properties#Source}</outfile>
+              <worksheet>Headers</worksheet>
+              <cell>N2</cell>
+              <evaluateFormulas>false</evaluateFormulas>
+              <append>false</append>
+            </con:configuration>
+          </con:dataSink>
+          <con:properties>
+            <con:property>
+              <con:name>Result</con:name>
+              <con:value>${responsevalidations#result}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Request</con:name>
+              <con:value>${Request#RawRequest}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Response</con:name>
+              <con:value>${Request#RawResponse}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>CorrelationID</con:name>
+              <con:value>${TransactionID#result}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>ExceptionCode</con:name>
+              <con:value>${Request#Response#$['exception']['exceptionCode']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>Message</con:name>
+              <con:value>${Request#Response#$['exception']['message']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>error</con:name>
+              <con:value>${Request#Response#$['error']}</con:value>
+            </con:property>
+            <con:property>
+              <con:name>description</con:name>
+              <con:value>${Request#Response#$['description']}</con:value>
+            </con:property>
+          </con:properties>
+        </con:config>
+      </con:testStep>
+      <con:testStep type="datasourceloop" name="DataSource Loop" id="df184ea3-0bb1-4eb0-b009-0f45e3245995">
+        <con:settings/>
+        <con:config>
+          <dataSourceStep>DataSource</dataSourceStep>
+          <targetStep>TransactionID</targetStep>
+          <discardResults>true</discardResults>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+      <con:breakPoints>
+        <con:testStepId>a567ed7b-0222-47d5-95b6-89427e534f60</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>db01c64a-3f1b-454e-8edc-cb463c60de99</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>b0d1ff29-5176-4ff1-a550-7d7b56aa7f5f</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>3feaaab9-4d3a-49a9-8a52-ebae47ed7b9b</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>2b3eb308-36a7-4558-b35e-83ad3376c8ea</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>941f6334-99b6-45bf-8c62-0753a6c1b261</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>c55b0106-b6e8-44fa-bc38-82db5f4068ff</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+      <con:breakPoints>
+        <con:testStepId>0d2fa36c-52b5-4435-8545-bc7fb5fa09dd</con:testStepId>
+        <con:status>NONE</con:status>
+        <con:properties/>
+      </con:breakPoints>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties/>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:reportTemplates/>
+    <con:xmlTemplates/>
+    <con:xmlTemplates/>
+    <con:parameters/>
+    <con:parameters/>
+  </con:reporting>
+  <con:reporting/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
